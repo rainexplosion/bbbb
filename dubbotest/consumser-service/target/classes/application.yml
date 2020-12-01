@@ -1,0 +1,17 @@
+dubbo:
+  application:
+    name: consumer-service
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.zb.service.impl
+  consumer:
+    check: false
+    timeout: 1000
+    retries: 5
+server:
+  port: 9009
